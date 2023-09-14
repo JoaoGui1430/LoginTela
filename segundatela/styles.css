@@ -1,0 +1,10 @@
+body{
+    background-color:rgb(173, 146, 146);
+}
+
+body >h1 {
+    text-align: center;
+}
+p{
+    text-align: center;
+}

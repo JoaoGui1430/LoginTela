@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"
-    <title></title>
+    <title>Login</title>
 </head>
 <body>
 <div class="main-login">
 <div class="left-login">
-<h1>Faça login<br>e entre para nosso VOZAO</h1>
+<h1>Faça login<br>e entre para nosso time</h1>
 <img src="./ponteanimada.svg" class="left-login-image" alt="PonteAnimada">
 </div>
   <div class="right-login">
@@ -18,15 +18,33 @@
         <h1>LOGIN</h1>
         <div class="textfield">
             <label for="usuario">Usuário</label>
-            <input type="text" name="Usuário" placeholder="Usuário">
+            <input type="text" id="usuario" name="Usuário" placeholder="Usuário">
         </div>
         <div class="textfield">
             <label for="senha">Senha</label>
-            <input type="password" name="Senha" placeholder="Senha">
-        </div>
-        <button class="btn-login">Login</button>
+            <input type="password" id="senha" name="Senha" placeholder="Senha">
+            <p id="erro-login" style="color: red;"></p>
+          </div>
+        <button class="btn-login" onclick="validarLogin(); return false">Login</button>
     </div>
   </div>
 </div>  
+
+<script>
+function validarLogin() {
+  const usuarioInput = document.getElementById('usuario');
+  const senhaInput = document.getElementById('senha');
+  const usuario = usuarioInput.value;
+  const senha = senhaInput.value;
+
+  if (usuario === 'admin' && senha === 'Torta') {
+    alert('Login bem Sucedido!');
+    location.href = "./segundatela/home.html";
+  } else {
+    const erroLogin= document.getElementById('erro-login');
+    erroLogin.textContent = 'Usuario Incorretos.'
+  }
+}
+</script>
 </body>
 </html>
