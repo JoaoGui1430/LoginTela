@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"
-    <title>Login</title>
+    <title></title>
 </head>
 <body>
 <div class="main-login">
@@ -37,12 +37,12 @@ function validarLogin() {
   const usuario = usuarioInput.value;
   const senha = senhaInput.value;
 
-  if (usuario === 'Admin' && senha === 'admin') {
+  if (usuario === 'Torta' && senha === 'LN29') {
     alert('Login bem Sucedido!');
-    location.href = "./segundatela/home.html";
+    location.href = "segundatela/home.html";
   } else {
     const erroLogin= document.getElementById('erro-login');
-    erroLogin.textContent = 'Usuario Incorretos.'
+    erroLogin.textContent = 'O LOGIN TA ERRADO. AGORA VOU IR ALI.'
   }
 }
 </script>
